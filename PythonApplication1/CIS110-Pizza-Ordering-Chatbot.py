@@ -1,16 +1,36 @@
 print("Hello, my name is John and I will be your assistant for today. I am here to help you order pizza!")
 print("\n To get started, I need to ask you a few questions. After typing your answer, press enter.")
 userName = input("\nEnter your name:  ")
+while len(userName) == 0:
+    userName = input("Name cannot be blank! Please enter your name: ")
+    
 if userName.lower() == "robert dennis":
     print(f"\nMy creator, {userName}. Pleasure to serve you!")
 else:
     print(f"Hello, {userName}. Nice to meet you!")
 size = input("\n What size do you want? Enter small, medium or large:  ")
+while size.lower() not in ["small","medium","large"]:
+    size = input("Invalid value! Please enter small, medium or large:  ")hg
+    
 flavor = input("\n Enter the flavor of pizza:  ")
+while len(flavor) == 0:
+    flavor = input("The flavor cannot be blank! Please enter your requested flavor of pizza: ")
+    
 crustType = input("\n What type of crust do you want:  ")
+while len(crustType) == 0:
+    crustType = input("The type of crust cannot be blank! Please enter the type of crust you want: ")
+    
 quantity = input("\n How many of these do you want to order? Enter a numeric value:  ")
+while not quantity. isdigit():
+    quantity = input("Value not recognized. Please enter a numeric value:  ") 
+    
 quantity = int(quantity)
 method = input("\n Is this carry out or delivery:  ")
+while method not in ["carry out","delivery"]
+    method = input("Invalid value! Please enter carry out or delivery:  ")
+
+while size.lower() not in ["small","medium","large"]:
+    size = input("Invalid value! Please enter small, medium or large:  ")
 if method.lower() == "delivery":
     deliveryFee = 5
 else: 
